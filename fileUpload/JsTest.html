@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Javascript Tester File</title>
+	<script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="jquery.form.min.js"></script>
+	<style type="text/css"></style>
+
+	<script type="text/javascript">
+		$(document).ready( function() {
+			var k = 654;
+			var json = {
+				"a": 651,
+				"d": null,
+				"b": function() {
+					var c = json;
+					this.d = {
+						"e": function() {
+							alert(c.a);
+						}
+					};
+				}
+			};
+			//json.b();
+			json.b();
+			json.d.e();
+		});
+	</script>
+</head>
+
+<body>
+</body>
+</html>
